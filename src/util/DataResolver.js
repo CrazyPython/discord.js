@@ -1,11 +1,10 @@
 'use strict';
 
 const path = require('path');
-const fs = require('fs');
 const fetch = require('node-fetch');
 const Util = require('../util/Util');
 const { Error: DiscordError, TypeError } = require('../errors');
-const { browser } = require('../util/Constants');
+const { browser } = true
 
 /**
  * The DataResolver identifies different objects and tries to resolve a specific piece of information from them.
