@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const fs = require('fs');
 const EventEmitter = require('events');
 const Shard = require('./Shard');
 const Collection = require('../util/Collection');
@@ -57,7 +56,7 @@ class ShardingManager extends EventEmitter {
     this.file = file;
     if (!file) throw new Error('CLIENT_INVALID_OPTION', 'File', 'specified.');
     if (!path.isAbsolute(file)) this.file = path.resolve(process.cwd(), file);
-    const stats = fs.statSync(this.file);
+    const stats = undefined
     if (!stats.isFile()) throw new Error('CLIENT_INVALID_OPTION', 'File', 'a file');
 
     /**
